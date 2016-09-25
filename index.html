@@ -1,0 +1,20 @@
+<html ng-app = "myApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src= "app.js"></script>
+    <title>Hello, World!</title>
+</head>
+ 
+<body ng-controller="FirstCtrl">
+
+<input type="text" ng-model= "search">
+
+<ul>
+  <li ng-repeat="meat in meats | orderBy: 'meat' | filter: search">The meat {{meat.meat}} has the rank {{meat.rank}} - {{meat.publicRate | currency}}</li>
+</ul>
+
+</body>
+
+
+</html>
